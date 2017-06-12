@@ -48,13 +48,15 @@
 				reed = reed.toString().split(',').join('');
 				document.getElementById('reeified').innerHTML = reed;
 			}
-			document.getElementById('ree').onchange = xreeify;
+			window.onload = function(){
+				document.getElementById('ree').oninput = xreeify;
+			};
 		</script>
 	</head>
 	<body>
 		<p id="Title">The Ree-ifier 9000</p>
 		<form action="" method="get">
-			<textarea class='formy' id="ree" type='text' name='reee' rows='10' cols='100' placeholder="REEeEeeEEeEee"></textarea><br>
+			<textarea class='formy' id="ree" type='text' name='reee' rows='10' cols='100' placeholder="REEeEeeEEeEee" ></textarea><br>
 			<input class='formy' type='button' value='Reeify' style="width:200px;height:50px;font-size: 150%;font-family: 'Comic Sans MS'" onClick="xreeify()">
 		</form>
 		<br>
